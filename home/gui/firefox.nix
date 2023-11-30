@@ -75,7 +75,7 @@
           "2800".enable = true;
 
           # resist fingerprinting block         
-          # "4500".enable = true;
+          "4500".enable = false;
 
           # optional hardening and opsec
           # "5000".enable = true;
