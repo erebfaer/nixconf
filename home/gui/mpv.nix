@@ -76,7 +76,7 @@
     
     scripts = with pkgs.mpvScripts; [
       mpv-playlistmanager
-      mpv-thumbfast
+      thumbfast
       uosc
     ];
 
