@@ -75,7 +75,7 @@
     };
     
     scripts = with pkgs.mpvScripts; [
-      mpv-playlistmanager-unstable
+      mpv-playlistmanager
       mpv-thumbfast
       uosc
     ];
