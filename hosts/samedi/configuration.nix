@@ -17,6 +17,8 @@
 
       ../common/amd.nix
       ../common/pipewire.nix
+
+      ../common/gui/kate.nix
     ];
 
   networking = {
