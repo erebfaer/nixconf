@@ -75,7 +75,11 @@
           "2800".enable = true;
 
           # resist fingerprinting block         
-          "4500".enable = false;
+          "4500" = { 
+            enable = true;
+            "4501"."resistFingerprinting".value = false;
+            "4520"."webgl.disabled".value = false;
+          };
 
           # optional hardening and opsec
           # "5000".enable = true;
