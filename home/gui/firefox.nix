@@ -43,6 +43,9 @@
 
         arkenfox = {
           enable = true;
+          "4500" = {
+            enable = true;
+          };
         };
       };
     };
