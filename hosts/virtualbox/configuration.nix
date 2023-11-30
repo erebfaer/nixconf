@@ -15,6 +15,8 @@
       ../../users/nk.nix
 
       ../common
+
+      ../common/gui/kate.nix
       
     ];
 
