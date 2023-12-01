@@ -88,6 +88,7 @@
           "4500" = { 
             enable = true;
             "4501"."privacy.resistFingerprinting".value = false;
+            "4504"."privacy.resistFingerprinting.letterboxing".value = false;
             "4520"."webgl.disabled".value = false;
           };
 
