@@ -19,7 +19,6 @@
     };
 
     config = {
-      #general
       save-position-on-quit = "yes";
       keep-open = "yes";
       border = "no";
@@ -52,7 +51,7 @@
       hwdex = "auto-safe";
       
       ## debanding
-      deband = "no";
+      deband = "yes";
       deband-iterations = 4;
       deband-threshold = 35;
       deband-range = 16;
