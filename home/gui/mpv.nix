@@ -74,10 +74,10 @@
       
     };
     
-    scripts = with pkgs.mpvScripts; [
-      mpv-playlistmanager
-      thumbfast
-      uosc
+    scripts =  [
+      pkgs.mpvScripts.mpv-playlistmanager
+      pkgs.mpvScripts.thumbfast
+      pkgs.mpvScripts.uosc
     ];
 
     scriptOpts = {
