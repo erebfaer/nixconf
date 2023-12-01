@@ -20,14 +20,23 @@
       version = "119.0"; 
     };
 
-
-
     profiles = {
       default = {
+
+        search = {
+          default = "DuckDuckGo";
+          force = true;
+        };
+        
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          # important
           bitwarden
           ublock-origin
+          skip-redirect
+          multi-account-containers
           sidebery
+
+          # optional
           violentmonkey
           bypass-paywalls-clean
           reddit-enhancement-suite
@@ -39,6 +48,7 @@
           # youtube stuff
           sponsorblock
           dearrow
+          improved-tube
         ];
 
         arkenfox = {
