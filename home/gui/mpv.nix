@@ -96,7 +96,7 @@
     scriptOpts = {
       
       playlistmanager = {
-        
+        # does this break?
         dynamic_binds = "yes";
         key_moveup = "UP WHEEL_UP";
         key_movedown = "DOWN WHEEL_DOWN";
