@@ -73,7 +73,7 @@
       tone-mapping = "bt.2446a";
 
       ## Shaders, in order of sub-sections
-      glsl-shaders = "~~/shaders/FSRCNNX_x2-0-4-1.glsl,~~/shaders/SSimDownscaler.glsl,~~/shaders/KrigBilateral.glsl";             
+      glsl-shaders = "~~/shaders/FSRCNNX_x2-0-4-1.glsl:~~/shaders/SSimDownscaler.glsl:~~/shaders/KrigBilateral.glsl";             
       ### Luma up
       scale = "ewa_lanczos";
       ### Luma down
