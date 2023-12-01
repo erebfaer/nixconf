@@ -33,7 +33,7 @@
       demuxer-max-bytes = "20M";
 
       # audio
-      # ao = ???
+      
       audio-channels = "stereo";
       audio-normalize-downmix = "yes";
       alang="jpn,jp,jap,Japanese,eng,en,enUS,en-US,English";
@@ -52,7 +52,7 @@
       hwdex = "auto-safe";
       
       ## debanding
-      deband = "yes";
+      deband = "no";
       deband-iterations = 4;
       deband-threshold = 35;
       deband-range = 16;
@@ -76,9 +76,7 @@
       ## Shaders, in order of sub-sections
       glsl-shaders =
         ''
-          ""~~/shaders/FSRCNNX_x2-0-4-1.glsl",
-          "~~/shaders/SSimDownscaler.glsl",
-          "~~/shaders/KrigBilateral.glsl"
+          "~~/shaders/FSRCNNX_x2-0-4-1.glsl,~~/shaders/SSimDownscaler.glsl,~~/shaders/KrigBilateral.glsl"
         '';               
       ### Luma up
       scale = "ewa_lanczos";
