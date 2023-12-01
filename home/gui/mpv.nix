@@ -1,5 +1,12 @@
 { pkgs, ... }:
 {
+
+  # link shaders
+  home.file.".config/mpv/shaders" = {
+    source = ./home/gui/shaders;
+    recursive = true;
+  };
+  
   programs.mpv = {
     enable = true;
 
@@ -66,12 +73,20 @@
       ## SDR/HDR
       tone-mapping = "bt.2446a";
 
-      ## Shaders
-      # TODO
+      ## Shaders, in order of sub-sections
+      glsl-shaders =
+        ''
+          ""~~/shaders/FSRCNNX_x2-0-4-1.glsl",
+          "~~/shaders/SSimDownscaler.glsl",
+          "~~/shaders/KrigBilateral.glsl"
+        '';               
       ### Luma up
+      scale = "ewa_lanczos";
       ### Luma down
+      dscale = "mitchell";
       ### Chroma up/down
-      
+      cscale = "ewa_lanczos";
+      sigmoid-upscaling = "yes";      
     };
     
     scripts =  [
