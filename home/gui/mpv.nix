@@ -3,7 +3,7 @@
 
   # link shaders
   home.file.".config/mpv/shaders" = {
-    source = ./home/gui/shaders;
+    source = ./shaders;
     recursive = true;
   };
   
