@@ -115,7 +115,7 @@
 
         settings = {
           "general.autoScroll" = true;
-          "extension.pocket.enabled" = false;
+          "extensions.pocket.enabled" = false;
           "signon.rememberSignons" = false;
           #"toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         };
