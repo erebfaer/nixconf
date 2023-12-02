@@ -23,7 +23,6 @@
       wl-clipboard
       kmix
       plasma-pa
-      latte-dock
     ];
     sessionVariables.NIXOS_OZONE_WL = "1";
   };
