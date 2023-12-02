@@ -114,6 +114,7 @@
           "general.autoScroll" = true;
           "extension.pocket.enabled" = false;
           "signon.rememberSignons" = false;
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         };
       };
     };
