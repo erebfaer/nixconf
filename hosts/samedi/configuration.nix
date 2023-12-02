@@ -9,7 +9,9 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
-      ../../kde-wayland.nix
+      # dont think these will work together atm, seperate displayManager stuff?
+      #../../kde-wayland.nix
+      ../common/gui/gnome.nix
 
       ../../users/nk.nix
 
