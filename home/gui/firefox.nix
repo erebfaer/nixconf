@@ -105,8 +105,11 @@
         # trying to fix min/max/close buttons not appearing
         userChrome =
           ''
-            :root:not([chromehidden~="menubar"]) #toolbar-menubar:not([autohide="true"]) + #TabsToolbar > .titlebar-buttonbox-container{
-              display: block !important;
+            #toolbar-menubar {
+              display: none !important;
+            }
+            #toolbar-menubar[autohide="true"]:not([inactive]) + #TabsToolbar > .titlebar-buttonbox-container {
+              visibility: visible !important;
             }
           '';
 
