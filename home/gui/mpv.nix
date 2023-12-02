@@ -116,6 +116,7 @@
         proximity_out = 80;
         destination_time = "total";
         autohide = "yes";
+        volume="left";
       };
     };
   };
