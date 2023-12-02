@@ -23,7 +23,7 @@
       wl-clipboard
       kmix
       plasma-pa
-      satty
+      watershot
     ];
     sessionVariables.NIXOS_OZONE_WL = "1";
   };
