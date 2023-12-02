@@ -37,12 +37,18 @@
       };
       gamescopeSession = {
         enable = true;
-        args = [];
+        args = [
+          "--rt"
+          "-f"
+        ];
       };
     };
     gamescope = {
       enable = true;
-      args = [];
+      args = [
+        "--rt"
+        "-f"
+      ];
     };
   };
 }
