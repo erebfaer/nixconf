@@ -107,7 +107,7 @@
       };
 
       uosc = {
-        scale_fullscreen = 100.0;
+        scale_fullscreen = 3;
         timeline_size = 10;
         timeline_persistency = "paused";
         progress = "never";
@@ -116,7 +116,6 @@
         proximity_out = 80;
         destination_time = "total";
         autohide = "yes";
-        volume="left";
       };
     };
   };
