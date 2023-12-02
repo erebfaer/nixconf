@@ -1,3 +1,3 @@
 pkgs: {
-  uosc = pkgs.callPack ./uosc.nix { };
+  # uosc = pkgs.callPackage ./uosc.nix { };
 }
