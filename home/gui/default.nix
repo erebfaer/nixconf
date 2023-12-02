@@ -30,4 +30,6 @@
       ];
     };
   };
+
+  services.flameshot.enable = true;
 }
