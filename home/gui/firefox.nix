@@ -101,6 +101,20 @@
           "8000".enable = true;
           "9000".enable = true;
         };
+
+        # trying to fix min/max/close buttons not appearing
+        userChrome =
+          ''
+            :root:not([chromehidden~="menubar"]) #toolbar-menubar:not([autohide="true"]) + #TabsToolbar > .titlebar-buttonbox-container{
+              display: block !important;
+            }
+          '';
+
+        settings = {
+          "general.autoScroll" = true;
+          "extension.pocket.enabled" = false;
+          "signon.rememberSignons" = false;
+        };
       };
     };
   };
