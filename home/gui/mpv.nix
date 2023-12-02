@@ -14,7 +14,7 @@
       MBTN_MID = "script-binding uosc/menu";
       MBTN_RIGHT = "script-binding playlistmanager/showplaylist";
       MBTN_LEFT = "cycle pause";
-      MBTN_LEFT_DOUBLE = "cycle fullscreen";
+      MBTN_LEFT_DBL = "cycle fullscreen";
       "x" = "set sub-delay 0";
     };
 
@@ -97,20 +97,33 @@
         key_moveup = "UP WHEEL_UP";
         key_movedown = "DOWN WHEEL_DOWN";
         key_playfile = "ENTER MBTN_LEFT";
-        ket_removefile = "BS MBTN_MID";
+        key_removefile = "BS MBTN_MID";
         key_closeplaylist = "ESC MBTN_RIGHT";
 
         playlist_display_timeout = 5;
-        # showamount=28
+        showamount=28;
+
+        style_ass_tags="{\\fs10}";
 
         # TODO add %pos to the playlist file templates (sym %pos. %name)
       };
 
       uosc = {
-        scale_fullscreen = 3;
-        timeline_size = 10;
+        # scale_fullscreen = 3; # post 5.0 scaling
+
+        # 4.7 fullscreen scaling
+        timeline_size_max_fullscreen=60;
+        controls_size_fullscreen=64;
+        volume_size_fullscreen=80;
+        menu_item_height_fullscreen=72;
+        menu_min_width_fullscreen=520;
+        top_bar_size_fullscreen=40;
+        
+        # the rest
+        # timeline_size = 10; # 5.0
+        timeline_size_max = 20;
         timeline_persistency = "paused";
-        progress = "never";
+        # progress = "never"; # after 5.0
         click_threshold = 200;
         proximity_in = 10;
         proximity_out = 80;
