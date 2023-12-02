@@ -107,7 +107,7 @@
       };
 
       uosc = {
-        scale_fullscreen = 3.0;
+        scale_fullscreen = 100.0;
         timeline_size = 10;
         timeline_persistency = "paused";
         progress = "never";
