@@ -107,7 +107,8 @@
       };
 
       uosc = {
-        timeline_size = 20;
+        scale_fullscreen = 3.0;
+        timeline_size = 10;
         timeline_persistency = "paused";
         progress = "never";
         click_threshold = 200;
