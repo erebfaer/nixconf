@@ -8,10 +8,11 @@
   home = {
     username = "nk";
     homeDirectory = "/home/nk";
-    pointerCurssor = {
+    pointerCursor = {
       package = pkgs.volantes-cursors;
       name = "Volantes";
       gtk.enable = true;
+      x11.enable = true;
     };
   };
 
