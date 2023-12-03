@@ -12,10 +12,11 @@
   };
 
   environment = {
-    systemPackages = with pkgs; [
+    systemPackages = (with pkgs; [
       wl-clipboard
-      gnome.gnome-tweaks
-    ] ++ (with pkgs.gnomeExtensions; [
+    ]) ++ (with pkgs.gnome; [
+      gnome-tweaks      
+    ]) ++ (with pkgs.gnomeExtensions; [
       appindicator
       tray-icons-reloaded
       dash-to-dock
