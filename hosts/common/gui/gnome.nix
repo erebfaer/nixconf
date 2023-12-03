@@ -17,7 +17,7 @@
       gnome.gnome-tweaks
       gnomeExtensions.appindicator
       # gnomeExtensions.sound-output-device-chooser
-      gnomeExtension.tray-icons-reloaded
+      gnomeExtensions.tray-icons-reloaded
       
     ];
     sessionVariables.NIXOS_OZONE_WL = "1";
