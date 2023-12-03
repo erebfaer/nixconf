@@ -23,6 +23,6 @@
       dash-to-panel
       just-perfection
     ]);
-    profileRelativeSessionVariables.NIXOS_OZONE_WL = "1";
+    SessionVariables.NIXOS_OZONE_WL = "1";
   };
 }
