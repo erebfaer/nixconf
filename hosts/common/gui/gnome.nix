@@ -16,7 +16,8 @@
       wl-clipboard
       gnome.gnome-tweaks
       gnomeExtensions.appindicator
-      gnomeExtensions.sound-output-device-chooser
+      # gnomeExtensions.sound-output-device-chooser
+      gnomeExtension.tray-icons-reloaded
       
     ];
     sessionVariables.NIXOS_OZONE_WL = "1";
