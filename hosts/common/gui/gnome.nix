@@ -15,11 +15,14 @@
     systemPackages = with pkgs; [
       wl-clipboard
       gnome.gnome-tweaks
-      gnomeExtensions.appindicator
-      # gnomeExtensions.sound-output-device-chooser
-      gnomeExtensions.tray-icons-reloaded
-      
-    ];
-    sessionVariables.NIXOS_OZONE_WL = "1";
+    ] ++ (with pkgs.gnomeExtensions; [
+      appindicator
+      tray-icons-reloaded
+      dash-to-dock
+      dash-to-dock-toggle
+      dash-to-panel
+      just-perfection
+    ]);
+    profileRelativeSessionVariables.NIXOS_OZONE_WL = "1";
   };
 }
