@@ -8,6 +8,11 @@
   home = {
     username = "nk";
     homeDirectory = "/home/nk";
+    pointerCurssor = {
+      package = pkgs.volantes-cursors;
+      name = "Volantes";
+      gtk.enable = true;
+    };
   };
 
   nixpkgs.config = {
