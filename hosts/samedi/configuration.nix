@@ -8,11 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-
-      # dont think these will work together atm, seperate displayManager stuff?
-      #../../kde-wayland.nix
-      ../common/gui/gnome.nix
-
+     
       ../../users/nk.nix
 
       ../common
@@ -20,7 +16,8 @@
       ../common/amd.nix
       ../common/pipewire.nix
 
-      ../common/gui/kate.nix
+      ../common/gui
+      ../common/gui/gnome.nix
     ];
 
   networking = {
