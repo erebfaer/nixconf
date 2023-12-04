@@ -1,10 +1,14 @@
-{ pkgs, config, ...}:
+{ inputs, pkgs, config, ...}:
 
 {
+
+  imports = [
+    inputs.nix-gaming.nixosModules.steamCompat
+  ];
+  
   # users.mutableUsers = false;
   # overwrites in system user setup/passwords
   # once I get secrets working
-  
   users.users.nk = {
     isNormalUser = true;
     shell = pkgs.fish;
@@ -20,6 +24,9 @@
   programs = {
     steam = {
       enable = true;
+      extraCompatPackages = [
+        inputs.nix-gaming.packages.${pkgs.system}.proton-ge
+      ];
       package = pkgs.steam.override {
         extraEnv = {};
         extraLibraries = pkgs: with pkgs; [

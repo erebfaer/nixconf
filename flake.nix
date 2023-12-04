@@ -25,7 +25,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Nix User Repository
+  # Nix User Repository
     nur.url = "github:nix-community/NUR"; 
 
   # Other flakes
@@ -33,14 +33,15 @@
       url = "github:dwarfmaster/arkenfox-nixos";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    pipewire-screenaudio.url = "github:IceDBorn/pipewire-screenaudio";
+    
+    nix-gaming.url = "github:fufexan/nix-gaming";
+      
   };
 
   outputs = {
     # add 'unstable' if using both channels
     self, nixpkgs, home-manager, nur,
-    arkenfox, ...
+    arkenfox, nix-gaming, ...
   } @ inputs: let
     inherit (self) outputs;
 

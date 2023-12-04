@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
-{
-  programs.java.enable = true;
-  home.packages = [ pkgs.starsector ];
+{     
+  home.packages = with pkgs; [
+    starsector
+  ];
 }

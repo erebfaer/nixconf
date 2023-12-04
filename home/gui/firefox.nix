@@ -7,8 +7,8 @@
   
   programs.firefox = {
     enable = true;
-    package = (pkgs.firefox.override { nativeMessagingHosts = [
-        inputs.pipewire-screenaudio.packages.${pkgs.system}.default ]; });
+    #package = (pkgs.firefox.override { nativeMessagingHosts = [
+    #    inputs.pipewire-screenaudio.packages.${pkgs.system}.default ]; });
     
 
     #nativeMessagingHosts = [
