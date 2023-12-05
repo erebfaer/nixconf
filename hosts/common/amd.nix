@@ -2,7 +2,7 @@
 
 {
   boot.initrd.kernelModules = [ "amdgpu" ];
-  services.xserver.videoDrivers = [ "amdgpu" ];
+  #services.xserver.videoDrivers = [ "amdgpu" ]; apparently default 'modesetting' is prefered
   hardware.opengl = {
     driSupport = true;
     driSupport32Bit = true;
