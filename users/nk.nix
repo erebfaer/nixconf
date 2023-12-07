@@ -40,10 +40,7 @@
           stdenv.cc.cc.lib
           libkrb5
           keyutils
-        ];
-        extraCompatPackages = [
-          inputs.nix-gaming.packages.${pkgs.system}.proton-ge
-        ];
+        ];   
       };
       gamescopeSession = {
         enable = true;
@@ -64,4 +61,8 @@
       ];
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    protonup-qt
+  ];
 }
