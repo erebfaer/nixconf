@@ -41,20 +41,26 @@
           libkrb5
           keyutils
         ];
+        extraCompatPackages = [
+          inputs.nix-gaming.packages.${pkgs.system}.proton-ge
+        ];
       };
       gamescopeSession = {
         enable = true;
         args = [
           "--rt"
           "-f"
+          "-e"
         ];
       };
     };
     gamescope = {
       enable = true;
+      capSysNice = true;
       args = [
         "--rt"
         "-f"
+        "-e"
       ];
     };
   };
