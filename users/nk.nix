@@ -64,9 +64,7 @@
 
   environment.systemPackages = with pkgs; [
     protonup-qt
-
-    xfce.thunar
-    xplorer
+    
     cinnamon.nemo-with-extensions
     
   ];
