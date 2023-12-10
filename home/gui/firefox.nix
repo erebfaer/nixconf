@@ -40,6 +40,7 @@
           violentmonkey
           bypass-paywalls-clean
           reddit-enhancement-suite
+          auto-tab-discard
 
           # steam stuff
           augmented-steam

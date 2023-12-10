@@ -23,6 +23,9 @@
       dash-to-dock-toggle
       dash-to-panel
       just-perfection
+      search-light
+      advanced-alttab-window-switcher
+      custom-hot-corners-extended
     ]);
     sessionVariables.NIXOS_OZONE_WL = "1";
   };

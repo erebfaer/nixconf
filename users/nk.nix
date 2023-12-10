@@ -40,20 +40,28 @@
           stdenv.cc.cc.lib
           libkrb5
           keyutils
-        ];   
-      };
-      gamescopeSession = {
-        enable = true;
-        args = [
-          "--rt"
-          "-f"
-          "-e"
+          glib
+        ];
+        extraPkgs = pkgs: with pkgs; [
+          mangohud
+          (writeShellScriptBin "ngs" ''
+            (sleep 1; pgrep gamescope| xargs renice -n -11 -p)&
+            exec gamescope "$@"
+          '')
         ];
       };
+      #gamescopeSession = {
+      #  enable = true;
+      #  args = [
+      #    "--rt"
+      #    "-f"
+      #    "-e"
+      #  ];
+      #};
     };
     gamescope = {
       enable = true;
-      capSysNice = true;
+      #capSysNice = true;
       args = [
         "--rt"
         "-f"
@@ -63,6 +71,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+     
     protonup-qt
     
     cinnamon.nemo-with-extensions
