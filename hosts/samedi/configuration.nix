@@ -24,6 +24,8 @@
     hostName = "samedi";
     networkmanager.enable = true;
   };
+
+  services.printing.enable = true;
   
   environment.systemPackages = with pkgs; [
     vim
