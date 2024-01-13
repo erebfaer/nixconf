@@ -4,5 +4,6 @@
   environment.systemPackages = with pkgs; [
     libsForQt5.okular
     libreoffice
+    wine
   ];
 }

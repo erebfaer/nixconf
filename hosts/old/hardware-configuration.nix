@@ -14,25 +14,25 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/d6f2350e-3196-47bd-99bd-c29a62895839";
+    { device = "/dev/disk/by-uuid/d834150d-bec1-4f80-b0b8-1f118f654dc1";
       fsType = "btrfs";
       options = [ "subvol=root" ];
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/d6f2350e-3196-47bd-99bd-c29a62895839";
+    { device = "/dev/disk/by-uuid/d834150d-bec1-4f80-b0b8-1f118f654dc1";
       fsType = "btrfs";
       options = [ "subvol=home" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/d6f2350e-3196-47bd-99bd-c29a62895839";
+    { device = "/dev/disk/by-uuid/d834150d-bec1-4f80-b0b8-1f118f654dc1";
       fsType = "btrfs";
       options = [ "subvol=nix" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/087C-0E88";
+    { device = "/dev/disk/by-uuid/0CF0-1727";
       fsType = "vfat";
     };
 
@@ -44,7 +44,7 @@
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp42s0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp5s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp4s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

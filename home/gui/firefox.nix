@@ -38,7 +38,7 @@
 
           # optional
           violentmonkey
-          bypass-paywalls-clean
+          # bypass-paywalls-clean # 3.4.7 seems gone, need rycee to update
           reddit-enhancement-suite
           auto-tab-discard
 
@@ -74,9 +74,9 @@
           "2000" = {
             enable = true;
             # if i want to keep history on close
-            #"2811" = {
-            #  "privacy.clearOnShutdown.history".value = false;
-            #};
+            "2811" = {
+              "privacy.clearOnShutdown.history".value = false;
+            };
           };
           
           "2400".enable = true;

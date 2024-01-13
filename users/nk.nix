@@ -22,6 +22,7 @@
   };
 
   programs = {
+      
     steam = {
       enable = true;
       extraCompatPackages = [
