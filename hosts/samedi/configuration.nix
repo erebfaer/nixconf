@@ -52,6 +52,8 @@
 
     heroic
     lutris
+
+    SDL_gfx
   ];
 
   environment.variables.EDITOR = "hx";
@@ -96,8 +98,10 @@
     "/".options = [ "compress=zstd" "noatime" ];
     "/home".options = [ "compress=zstd" "noatime" ];
     "/nix".options = [ "compress=zstd" "noatime" ];
-    # "/swap".options = [ "noatime" ];
+    "/swap".options = [ "noatime" ];
   };
+
+  swapDevices = [ { device = "/swap/swapfile"; } ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

@@ -71,7 +71,13 @@
           "1600".enable = true;
           "1700".enable = true;
           
-          "2000" = {
+          "2000".enable = true;
+          
+          "2400".enable = true;
+          
+          "2600".enable = true;
+          "2700".enable = true;
+          "2800" = {
             enable = true;
             # if i want to keep history on close
             "2811" = {
@@ -79,12 +85,6 @@
             };
           };
           
-          "2400".enable = true;
-          
-          "2600".enable = true;
-          "2700".enable = true;
-          "2800".enable = true;
-
           # resist fingerprinting block         
           "4500" = { 
             enable = true;

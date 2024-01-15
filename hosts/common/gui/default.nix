@@ -5,5 +5,8 @@
     libsForQt5.okular
     libreoffice
     wine
+    winetricks
+
+    webcord
   ];
 }
