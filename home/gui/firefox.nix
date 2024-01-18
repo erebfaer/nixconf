@@ -38,7 +38,7 @@
 
           # optional
           violentmonkey
-          # bypass-paywalls-clean # 3.4.7 seems gone, need rycee to update
+          bypass-paywalls-clean
           reddit-enhancement-suite
           auto-tab-discard
 

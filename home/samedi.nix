@@ -4,6 +4,7 @@
   imports = [
     ./gui
     ./games
+    #./cli
   ];
 
   programs.git = {
