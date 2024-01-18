@@ -18,6 +18,7 @@
       # "networkmanager"
       "video"
       "audio"
+      "gamemode"
     ];
   };
 
@@ -42,6 +43,7 @@
           libkrb5
           keyutils
           glib
+          SDL_gfx # added for OXCE
         ];
         extraPkgs = pkgs: with pkgs; [
           mangohud
