@@ -1,13 +1,20 @@
-{ inputs, outputs, pkgs, ... }:
-
-{
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    libsForQt5.okular
-    libreoffice
     wine
     winetricks
 
     webcord
+
+    jellyfin-media-player
+    jellyfin-mpv-shim
+
+    # feishin
+
+    libsForQt5.index
+
+    libsForQt5.okular
+    libreoffice
+    standardnotes
   ];
 
   programs.gamemode = {

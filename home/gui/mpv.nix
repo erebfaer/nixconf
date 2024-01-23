@@ -21,7 +21,7 @@
     config = {
       save-position-on-quit = "yes";
       keep-open = "yes";
-      border = "no";
+      border = "yes";
       osc = "no";
       osd-bar = "no";
 

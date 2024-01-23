@@ -1,12 +1,19 @@
-{ inputs, outputs, config, lib, pkgs, ...}:
-
 {
-   
+  inputs,
+  outputs,
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   programs.librewolf = {
     enable = true;
-    package = (pkgs.firefox.override { nativeMessagingHosts = [
-        inputs.pipewire-screenaudio.packages.${pkgs.system}.default ]; });
-    
+    package = pkgs.firefox.override {
+      nativeMessagingHosts = [
+        inputs.pipewire-screenaudio.packages.${pkgs.system}.default
+      ];
+    };
+
     profiles = {
       default = {
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [

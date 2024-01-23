@@ -1,10 +1,15 @@
-{ pkgs, inputs, outputs, ...}: {
-
+{
+  pkgs,
+  inputs,
+  outputs,
+  ...
+}: {
   imports = [
-    ./firefox.nix
+    ./firefox
     ./mpv.nix
+    ./vscodium.nix
   ];
-  
+
   home = {
     username = "nk";
     homeDirectory = "/home/nk";
