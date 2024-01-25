@@ -1,10 +1,17 @@
 # for all hosts
-{ pkgs, inputs, outputs, ...}: {
+{
+  pkgs,
+  inputs,
+  outputs,
+  ...
+}: {
   imports = [
     ./systemd-boot.nix
     ./locale.nix
     ./nix.nix
-    ./fish.nix 
+    ./fish.nix
+    ./hardware-tools.nix
+    ./nix-tools.nix
   ];
 
   nixpkgs.config.allowUnfree = true;

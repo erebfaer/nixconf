@@ -18,8 +18,6 @@
 
     ../common/gui
     ../common/gui/gnome.nix
-
-    ../common/nix-tools.nix
   ];
 
   networking = {
@@ -28,6 +26,8 @@
   };
 
   services.printing.enable = true;
+  boot.extraModulePackages = with config.boot.kernelPackages; [nct6687d]; # for CPU sensors
+  boot.kernelModules = ["nct6687d"];
 
   environment.systemPackages = with pkgs; [
     vim

@@ -1,20 +1,23 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    # tools
     wine
     winetricks
+    resources
 
-    webcord
-
+    # multimedia
     jellyfin-media-player
     jellyfin-mpv-shim
 
-    # feishin
+    # feishin # electron broken, needs update
 
-    libsForQt5.index
-
+    # documents
     libsForQt5.okular
     libreoffice
-    standardnotes
+    standardnotes # broken
+
+    webcord
+    libsForQt5.index # currently broken
   ];
 
   programs.gamemode = {
