@@ -20,7 +20,9 @@
     nix-index = {
       # locate package containing file
       enable = true;
-      enableFishIntegration = true;
+      enableFishIntegration = true; # apparently need all three
+      enableBashIntegration = false;
+      enableZshIntegration = false;
     };
   };
 }
