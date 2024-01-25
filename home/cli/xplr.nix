@@ -7,6 +7,6 @@
   programs.xplr = {
     enable = true;
     extraConfig = "";
-    plugins = [];
+    # plugins = [];
   };
 }
