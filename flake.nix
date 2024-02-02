@@ -17,7 +17,8 @@
     # Official Nix - stable, unstable, configure as necessary
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
     # unstable.url = "github:NixOs/nixpkgs/nixos-unstable";
-    nixpkgs.url = "github:NixOs/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOs/nixpkgs/nixos-23.11";
+    unstable.url = "github:NixOs/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -35,12 +36,14 @@
 
     nix-gaming.url = "github:fufexan/nix-gaming";
     nix-alien.url = "github:thiagokokada/nix-alien";
+    nix-colors.url = "github:misterio77/nix-colors";
   };
 
   outputs = {
     # add 'unstable' if using both channels
     self,
     nixpkgs,
+    unstable,
     home-manager,
     nur,
     arkenfox,

@@ -18,6 +18,10 @@
 
     webcord
     libsForQt5.index # currently broken
+
+    # anime tracking
+    trackma
+    trackma-gtk
   ];
 
   programs.gamemode = {

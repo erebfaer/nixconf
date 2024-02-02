@@ -57,12 +57,18 @@
   environment.variables.EDITOR = "hx";
 
   # Services.
-  services.openssh = {
-    enable = true;
-    openFirewall = true;
+  services = {
+    openssh = {
+      enable = true;
+      openFirewall = true;
+    };
+
+    rpcbind.enable = true;
   };
 
   system.stateVersion = "23.11"; # DO NOT CHANGE
+
+  boot.supportedFilesystems = ["nfs"];
 
   # mount options
   fileSystems = {
@@ -70,6 +76,14 @@
     "/home".options = ["compress=zstd" "noatime"];
     "/nix".options = ["compress=zstd" "noatime"];
     "/swap".options = ["noatime"];
+    "/mnt/ayizan" = {
+      device = "192.168.1.24:/Multimedia";
+      fsType = "nfs";
+    };
+    "/mnt/legba" = {
+      device = "192.168.1.26:/home/erebfaer/Downloads";
+      fsType = "nfs";
+    };
   };
 
   swapDevices = [{device = "/swap/swapfile";}];
