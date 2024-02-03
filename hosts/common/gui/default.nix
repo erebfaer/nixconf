@@ -2,14 +2,12 @@
   pkgs,
   inputs,
   ...
-}: let
-  unstable = import inputs.unstable {config = {allowUnfree = true;};}; # import unstable configure unfree for easy way to install unstable packages
-in {
+}: {
   environment.systemPackages = with pkgs; [
     # tools
     wine
     winetricks
-    unstable.resources
+    inputs.unstable.legacyPackages."${pkgs.system}".resources
 
     # multimedia
     jellyfin-media-player
