@@ -15,8 +15,6 @@
   inputs = {
     # Repos, management, other nix specific stuff
     # Official Nix - stable, unstable, configure as necessary
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
-    # unstable.url = "github:NixOs/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:NixOs/nixpkgs/nixos-23.11";
     unstable.url = "github:NixOs/nixpkgs/nixos-unstable";
 
