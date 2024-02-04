@@ -18,6 +18,8 @@
 
     ../common/gui
     ../common/gui/gnome.nix
+
+    ../common/games
   ];
 
   networking = {
@@ -47,11 +49,6 @@
     statix
 
     nfs-utils
-
-    heroic
-    lutris
-
-    SDL_gfx
   ];
 
   environment.variables.EDITOR = "hx";

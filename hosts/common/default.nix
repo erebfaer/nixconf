@@ -12,6 +12,7 @@
     ./fish.nix
     ./hardware-tools.nix
     ./nix-tools.nix
+    ./unsorted.nix
   ];
 
   nixpkgs.config.allowUnfree = true;

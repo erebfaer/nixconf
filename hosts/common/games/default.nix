@@ -11,5 +11,9 @@
 
   environment.systemPackages = with pkgs; [
     protonup-qt
+    protontricks
+
+    heroic
+    lutris
   ];
 }
