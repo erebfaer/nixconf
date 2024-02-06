@@ -11,7 +11,7 @@
 
   environment.systemPackages = with pkgs; [
     protonup-qt
-    protontricks
+    unstable.protontricks
 
     heroic
     lutris

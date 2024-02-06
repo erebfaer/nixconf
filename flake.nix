@@ -51,28 +51,17 @@
   } @ inputs: let
     inherit (self) outputs;
 
-    #overlays = self.overlays {
-    #  nur = nur.overlay;
-    #};
-
     systems = [
       # supported systems
       "x86_64-linux"
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
-    # packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+    overlays = import ./overlays {inherit inputs;};
 
     nixosConfigurations = {
       # deploy config from flake directory with:
-      # sudo nixos-rebuild switch --flake .#nixos-test
-      "nixos-test" = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;}; # pass inputs to modules
-        modules = [
-          ./hosts/virtualbox/configuration.nix # system specifc config
-        ];
-      };
-
+      # sudo nixos-rebuild switch --flake .#hostname
       "samedi" = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;}; # pass inputs to modules
         modules = [
@@ -84,14 +73,6 @@
     homeConfigurations = {
       # deply home config with:
       # home-manager switch --flake .#username@hostname
-      "nk@nixos-test" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [
-          ./home/test.nix
-        ];
-      };
-
       "nk@samedi" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {inherit inputs outputs;};
