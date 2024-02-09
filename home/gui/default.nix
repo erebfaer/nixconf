@@ -34,7 +34,8 @@
     wezterm.enable = true;
     obs-studio = {
       enable = true;
-      plugins = with pkgs.obs-studio-plugins; [
+      package = pkgs.unstable.obs-studio;
+      plugins = with pkgs.unstable.obs-studio-plugins; [
         wlrobs
         # obs-backgroundremoval # possible breaking build
         obs-pipewire-audio-capture
