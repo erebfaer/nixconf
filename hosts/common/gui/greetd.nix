@@ -10,7 +10,7 @@
 
   services.greetd = {
     enable = true;
-    default_session = {
+    settings.default_session = {
       command = "${pkgs.greetd.tuigreet}/bin/tuigreet \
       -t -r --remember-user-session --user-menu --asterisks";
     };
