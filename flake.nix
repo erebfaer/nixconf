@@ -14,19 +14,19 @@
   # inputs are dependencies
   inputs = {
     # Repos, management, other nix specific stuff
-    # Official Nix - stable, unstable, configure as necessary
     nixpkgs.url = "github:NixOs/nixpkgs/nixos-23.11";
     unstable.url = "github:NixOs/nixpkgs/nixos-unstable";
-
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     # Nix User Repository
     nur.url = "github:nix-community/NUR";
 
     # Other flakes
+    nix-index-database.url = "github:Mic92/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+
     arkenfox = {
       url = "github:dwarfmaster/arkenfox-nixos";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,6 +44,7 @@
     unstable,
     home-manager,
     nur,
+    nix-index-database,
     arkenfox,
     nix-gaming,
     nix-alien,
@@ -66,6 +67,7 @@
         specialArgs = {inherit inputs outputs;}; # pass inputs to modules
         modules = [
           ./hosts/samedi/configuration.nix # system specifc config
+          nix-index-database.nixosModules.nix-index
         ];
       };
     };

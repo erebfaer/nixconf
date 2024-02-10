@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+  imports = [
+    inputs.nix-index-database.nixosModules.nix-index
+  ];
+
   nixpkgs.overlays = [inputs.nix-alien.overlays.default];
 
   environment.systemPackages = with pkgs; [
@@ -24,5 +28,7 @@
       enableBashIntegration = false;
       enableZshIntegration = false;
     };
+
+    nix-index-database.comma.enable = true;
   };
 }

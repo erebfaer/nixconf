@@ -7,7 +7,7 @@
     # tools
     wine
     winetricks
-    inputs.unstable.legacyPackages."${pkgs.system}".resources
+    unstable.resources
 
     # multimedia
     jellyfin-media-player
@@ -23,9 +23,7 @@
     webcord
     libsForQt5.index # currently broken
 
-    # anime tracking
-    trackma
-    trackma-gtk
+    trackma-gtk # anime tracking
   ];
 
   programs.gamemode = {
