@@ -12,6 +12,8 @@
     ./cli
 
     ./unsorted.nix
+
+    ./gui/hyprland.nix
   ];
 
   nixpkgs = {

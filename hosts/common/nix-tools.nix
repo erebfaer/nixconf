@@ -14,9 +14,12 @@
     nil # lsp
     nixd # lsp but with eval
     alejandra # formatter
+    statix # highlights antipatterns
 
     nix-alien # run non-nix stuff
     nix-init # generate packages from URLs
+
+    manix # search nixpkgs/nixos/home-manager
   ];
 
   programs = {
@@ -29,6 +32,6 @@
       enableZshIntegration = false;
     };
 
-    nix-index-database.comma.enable = true;
+    nix-index-database.comma.enable = true; # , to just run uninstalled packages
   };
 }

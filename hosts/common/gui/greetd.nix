@@ -12,7 +12,9 @@
     enable = true;
     settings.default_session = {
       command = "${pkgs.greetd.tuigreet}/bin/tuigreet \
-      -t -r --remember-user-session --user-menu --asterisks";
+      -t -r --remember-user-session --user-menu --asterisks \
+      -s 
+      ";
     };
   };
 }

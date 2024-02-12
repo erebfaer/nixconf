@@ -16,8 +16,9 @@
     ../common/amd.nix
     ../common/pipewire.nix
 
-    ../common/gui
+    ../common/gui/lightdm.nix
     ../common/gui/gnome.nix
+    ../common/gui/hyprland.nix
 
     ../common/games
   ];
