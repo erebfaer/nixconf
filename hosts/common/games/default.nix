@@ -15,5 +15,7 @@
 
     heroic
     lutris
+
+    unstable.ludusavi
   ];
 }
