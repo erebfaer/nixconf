@@ -47,6 +47,8 @@
       enableRenice = true;
       settings.general.renice = 10;
     };
+
+    trippy.enable = true;
   };
 
   services.mediamtx = {

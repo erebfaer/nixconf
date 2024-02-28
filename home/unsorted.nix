@@ -6,7 +6,7 @@
     fd
     ripgrep-all
     verco
-    dust
+    du-dust
     duf
     nerdfonts
   ];
@@ -17,7 +17,6 @@
     mcfly.enable = true;
     gitui.enable = true;
     git.delta.enable = true;
-    trippy.enable = true;
     eza.enable = true;
     bat.enable = true;
     ripgrep.enable = true;
