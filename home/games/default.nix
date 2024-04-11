@@ -4,6 +4,7 @@
     fallout-ce
     fallout2-ce
     openmw
+    forge-mtg
 
     # roguelikes
     brogue-ce

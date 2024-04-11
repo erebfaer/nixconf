@@ -37,6 +37,7 @@
             keyutils
             glib
             SDL_gfx # added for OXCE
+            xorg.libxkbfile # added for RimSort
           ];
         extraPkgs = pkgs:
           with pkgs; [
