@@ -28,6 +28,14 @@
 
     trackma-gtk # anime tracking
 
+    nodejs
+    gnumake
+    gcc
+    python311Packages.torchWithRocm
+
+    unstable.oterm
+    unstable.lmstudio
+
     p7zip
     # unstable.obsidian # outdated electron
     gnome.zenity
@@ -51,5 +59,15 @@
     };
 
     trippy.enable = true;
+  };
+
+  virtualisation.docker = {
+    enable = true;
+    storageDriver = "btrfs";
+  };
+
+  services.ollama = {
+    enable = true;
+    acceleration = "rocm";
   };
 }
