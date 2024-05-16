@@ -18,7 +18,7 @@
 
     #../common/gui/lightdm.nix
     ../common/gui/gnome.nix
-    ../common/gui/hyprland.nix
+    # ../common/gui/hyprland.nix
 
     ../common/games
   ];
@@ -42,6 +42,7 @@
   boot.kernelModules = ["nct6687d"];
 
   environment.systemPackages = with pkgs; [
+    # TODO: clean this out
     vim
     wget
     git

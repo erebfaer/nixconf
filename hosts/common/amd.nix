@@ -1,7 +1,11 @@
-{ pkgs, inputs, outputs, ... }:
-
 {
-  boot.initrd.kernelModules = [ "amdgpu" ];
+  pkgs,
+  inputs,
+  outputs,
+  ...
+}: {
+  # imports = [./rocm-path.nix];
+  boot.initrd.kernelModules = ["amdgpu"];
   #services.xserver.videoDrivers = [ "amdgpu" ]; apparently default 'modesetting' is prefered
   hardware.opengl = {
     driSupport = true;
@@ -10,6 +14,6 @@
     extraPackages = with pkgs; [
       rocm-opencl-icd
       rocm-opencl-runtime
-    ]; 
+    ];
   };
 }

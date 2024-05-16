@@ -45,6 +45,17 @@
     yazi
     syncthing
     ueberzugpp
+    rio
+    spotify-player
+    ferium
+    warp-terminal
+
+    transgui
+    flood
+
+    calibre
+
+    unstable.zed-editor
   ];
 
   programs = {
@@ -67,7 +78,19 @@
   };
 
   services.ollama = {
-    enable = true;
+    enable = false;
+    package = pkgs.unstable.ollama;
     acceleration = "rocm";
+  };
+
+  # usb devices
+  services.devmon.enable = true;
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
+
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [8000];
+    allowedUDPPorts = [8000];
   };
 }

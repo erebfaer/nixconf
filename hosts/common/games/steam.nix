@@ -4,10 +4,6 @@
   config,
   ...
 }: {
-  imports = [
-    inputs.nix-gaming.nixosModules.steamCompat
-  ];
-
   programs = {
     gamescope = {
       enable = true;
@@ -19,7 +15,7 @@
     steam = {
       enable = true;
       extraCompatPackages = [
-        inputs.nix-gaming.packages.${pkgs.system}.proton-ge
+        pkgs.proton-ge-bin
       ];
       package = pkgs.steam.override {
         extraEnv = {};

@@ -8,3 +8,8 @@ This is for personal use. Don't trust me to do anything.
 2. Get this repo
 3. Move and link config + hardware to appropriate hosts folder
 4. Edit config for new system, just basic hardware and keep it minimal
+
+
+## TODO
+- Use nixos-hardware
+- sort out btrfs maintenance stuff

@@ -25,7 +25,10 @@
     pkgs.man-pages
   ];
 
-  services.flatpak.enable = true;
+  services = {
+    flatpak.enable = true;
+    envfs.enable = true; # populate /bin so shebangs work
+  };
 
   documentation = {
     dev.enable = true;
