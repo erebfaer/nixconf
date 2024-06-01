@@ -21,13 +21,13 @@
     unstable.spotube
 
     # documents
-    libsForQt5.okular
+    kdePackages.okular
     libreoffice
     standardnotes # broken
     unstable.obsidian # electron
     notesnook
 
-    libsForQt5.index # currently broken
+    # libsForQt5.index # broken on gnome, and cant find qt6 version
 
     trackma-gtk # anime tracking
 
