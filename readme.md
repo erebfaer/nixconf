@@ -13,3 +13,7 @@ This is for personal use. Don't trust me to do anything.
 ## TODO
 - Use nixos-hardware
 - sort out btrfs maintenance stuff
+- nix-ld-rs?
+- variable/flag based config management? e.g. if gui then import gui stuff
+- secrets
+- probably impermenance on reinstall

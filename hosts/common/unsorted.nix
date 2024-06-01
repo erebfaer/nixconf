@@ -13,49 +13,44 @@
     # multimedia
     jellyfin-media-player
     jellyfin-mpv-shim
-
-    # feishin # electron broken, needs update
+    unstable.feishin # electron
     spotify
     tauon
+    spotify-player
+    vlc
+    unstable.spotube
 
     # documents
     libsForQt5.okular
     libreoffice
     standardnotes # broken
+    unstable.obsidian # electron
+    notesnook
 
-    webcord
     libsForQt5.index # currently broken
 
     trackma-gtk # anime tracking
 
-    nodejs
-    gnumake
-    gcc
-    python311Packages.torchWithRocm
-
-    unstable.oterm
-    unstable.lmstudio
-
     p7zip
-    # unstable.obsidian # outdated electron
+
     gnome.zenity
-    vlc
+
     unstable.spacedrive
     fd
     yazi
     syncthing
     ueberzugpp
     rio
-    spotify-player
+
     ferium
     warp-terminal
 
     transgui
-    flood
-
-    calibre
 
     unstable.zed-editor
+    lact
+    httm
+    unstable.xiu
   ];
 
   programs = {
@@ -77,17 +72,15 @@
     storageDriver = "btrfs";
   };
 
-  services.ollama = {
-    enable = false;
-    package = pkgs.unstable.ollama;
-    acceleration = "rocm";
-  };
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = ["nk"];
 
   # usb devices
   services.devmon.enable = true;
   services.gvfs.enable = true;
   services.udisks2.enable = true;
 
+  # can't remember what wanted this...
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [8000];
