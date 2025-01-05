@@ -3,7 +3,7 @@
     starsector
     fallout-ce
     fallout2-ce
-    openmw
+    # openmw
     forge-mtg
 
     # roguelikes

@@ -9,11 +9,14 @@
     wine
     winetricks
     unstable.resources
+    ffmpeg
+    dua
+    bandwhich
 
     # multimedia
     jellyfin-media-player
     jellyfin-mpv-shim
-    unstable.feishin # electron
+    # unstable.feishin # electron
     spotify
     tauon
     spotify-player
@@ -33,24 +36,27 @@
 
     p7zip
 
-    gnome.zenity
+    zenity
 
     unstable.spacedrive
     fd
-    yazi
     syncthing
     ueberzugpp
     rio
 
     ferium
-    warp-terminal
 
     transgui
 
-    unstable.zed-editor
     lact
     httm
     unstable.xiu
+
+    via
+
+    ungoogled-chromium
+
+    onlyoffice-bin
   ];
 
   programs = {
@@ -65,6 +71,10 @@
     };
 
     trippy.enable = true;
+
+    appimage.binfmt = true; # run appimages seamlessly
+
+    ydotool.enable = true;
   };
 
   virtualisation.docker = {

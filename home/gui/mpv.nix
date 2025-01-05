@@ -14,6 +14,8 @@
       MBTN_LEFT = "cycle pause";
       MBTN_LEFT_DBL = "cycle fullscreen";
       "x" = "set sub-delay 0";
+
+      "/" = "script-binding uosc/keybinds";
     };
 
     config = {
@@ -30,9 +32,9 @@
       demuxer-max-bytes = "20M";
 
       # audio
-
       audio-channels = "stereo";
       audio-normalize-downmix = "yes";
+      ad-lavc-downmix = "yes";
       alang = "jpn,jp,jap,Japanese,eng,en,enUS,en-US,English";
       audio-pitch-correction = "yes";
 
@@ -107,19 +109,20 @@
       };
 
       uosc = {
-        # scale_fullscreen = 3; # post 5.0 scaling
+        scale_fullscreen = 3; # post 5.0 scaling
+        timeline_size = 10; # 5.0
 
         # 4.7 fullscreen scaling
-        timeline_size_max_fullscreen = 60;
-        controls_size_fullscreen = 64;
-        volume_size_fullscreen = 80;
-        menu_item_height_fullscreen = 72;
-        menu_min_width_fullscreen = 520;
-        top_bar_size_fullscreen = 40;
+        #timeline_size_max_fullscreen = 60;
+        #controls_size_fullscreen = 64;
+        #volume_size_fullscreen = 80;
+        #menu_item_height_fullscreen = 72;
+        #menu_min_width_fullscreen = 520;
+        #top_bar_size_fullscreen = 40;
+        # timeline_size_max = 20;
 
         # the rest
-        # timeline_size = 10; # 5.0
-        timeline_size_max = 20;
+
         timeline_persistency = "paused";
         # progress = "never"; # after 5.0
         click_threshold = 200;

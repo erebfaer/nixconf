@@ -17,7 +17,7 @@
     ../common/pipewire.nix
 
     ../common/dm/sddm.nix
-    ../common/gui/plasma6.nix
+    #../common/gui/plasma6.nix
     ../common/gui/gnome.nix
 
     ../common/games

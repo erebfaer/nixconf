@@ -27,4 +27,11 @@
     zellij.enable = true;
     nnn.enable = true;
   };
+
+  services = {
+    espanso = {
+      enable = true;
+      package = pkgs.espanso-wayland;
+    };
+  };
 }

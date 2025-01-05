@@ -13,15 +13,13 @@
       (with pkgs; [
         wl-clipboard
         adwaita-qt # get gnome theme working on qt
-      ])
-      ++ (with pkgs.gnome; [
         gnome-tweaks
       ])
       ++ (with pkgs.gnomeExtensions; [
         appindicator
         tray-icons-reloaded
         dash-to-dock
-        dash-to-dock-toggle
+        # dash-to-dock-toggle
         dash-to-panel
         just-perfection
         search-light

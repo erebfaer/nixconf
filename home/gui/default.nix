@@ -8,6 +8,7 @@
     ./firefox
     ./mpv.nix
     ./vscodium.nix
+    ./zed.nix
   ];
 
   home = {
@@ -26,12 +27,24 @@
     allowUnfreePredicate = _: true;
   };
 
-  nixpkgs.overlays = with inputs; [nur.overlay];
+  nixpkgs.overlays = with inputs; [nur.overlays.default];
 
   programs = {
     home-manager.enable = true;
     git.enable = true;
     wezterm.enable = true;
+    kitty.enable = true;
+    nushell.enable = true;
+    starship = {
+      enable = true;
+      enableFishIntegration = true;
+      enableNushellIntegration = true;
+    };
+    yazi = {
+      enable = true;
+      enableFishIntegration = true;
+      enableNushellIntegration = true;
+    };
     obs-studio = {
       enable = true;
       package = pkgs.unstable.obs-studio;

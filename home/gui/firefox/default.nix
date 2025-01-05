@@ -44,7 +44,7 @@
 
           # optional
           violentmonkey
-          bypass-paywalls-clean
+          # bypass-paywalls-clean
           reddit-enhancement-suite
           auto-tab-discard
 
