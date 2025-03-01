@@ -77,11 +77,6 @@
     ydotool.enable = true;
   };
 
-  virtualisation.docker = {
-    enable = true;
-    storageDriver = "btrfs";
-  };
-
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = ["nk"];
 

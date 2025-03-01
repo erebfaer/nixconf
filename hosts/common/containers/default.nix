@@ -17,6 +17,11 @@
     };
   };
 
+  virtualisation.containers.storage.settings.storage.driver = "btrfs";
+
+  # Allow non-root containers to access lower port numbers
+  boot.kernel.sysctl."net.ipv4.ip_unprivileged_port_start" = 80;
+
   environment.systemPackages = with pkgs; [
     podman-compose
     compose2nix

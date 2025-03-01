@@ -16,7 +16,7 @@
     alejandra # formatter
     statix # highlights antipatterns
 
-    nix-alien # run non-nix stuff
+    #nix-alien # run non-nix stuff - build error?
     nix-init # generate packages from URLs
 
     manix # search nixpkgs/nixos/home-manager

@@ -22,9 +22,10 @@
 
     ../common/games
 
-    ../common/unbound.nix
+    # breaks current dns
+    # ../common/unbound.nix
     ../common/containers
-    ../common/containers/pihole.nix
+    # ../common/containers/pihole.nix
   ];
 
   nixpkgs = {
