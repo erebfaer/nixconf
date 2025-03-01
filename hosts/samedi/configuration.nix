@@ -21,6 +21,10 @@
     ../common/gui/gnome.nix
 
     ../common/games
+
+    ../common/unbound.nix
+    ../common/containers
+    ../common/containers/pihole.nix
   ];
 
   nixpkgs = {
@@ -38,8 +42,15 @@
   };
 
   services.printing.enable = true;
-  boot.extraModulePackages = with config.boot.kernelPackages; [nct6687d]; # for CPU sensors
-  boot.kernelModules = ["nct6687d"];
+
+  # Kernel stuff
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+    extraModulePackages = with config.boot.kernelPackages; [nct6687d]; # for CPU sensors
+    kernelModules = ["nct6687d"];
+    kernelParams = [ "preempt=full" ]; # preempt for realtime or bonus fps?
+  };
+
 
   environment.systemPackages = with pkgs; [
     # TODO: clean this out

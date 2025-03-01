@@ -109,8 +109,8 @@
       };
 
       uosc = {
-        scale_fullscreen = 3; # post 5.0 scaling
-        timeline_size = 10; # 5.0
+        scale_fullscreen = 1.5; # post 5.0 scaling
+        timeline_size = 20; # 5.0
 
         # 4.7 fullscreen scaling
         #timeline_size_max_fullscreen = 60;

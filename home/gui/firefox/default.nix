@@ -19,6 +19,8 @@
     #  inputs.pipewire-screenaudio.packages.${pkgs.system}.default
     #];
 
+    wrapperConfig.speechSynthesisSupport = false; # speechd might be causeing audio issues
+
     arkenfox = {
       enable = true;
       version = "122.0";
