@@ -21,6 +21,7 @@
     ../common/gui/gnome.nix
 
     ../common/games
+    # ../common/games/awakened-poe.nix
 
     # breaks current dns
     # ../common/unbound.nix

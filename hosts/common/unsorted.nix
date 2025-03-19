@@ -57,6 +57,8 @@
     ungoogled-chromium
 
     onlyoffice-bin
+
+    unstable.gdlauncher-carbon # minecraft launcher
   ];
 
   programs = {

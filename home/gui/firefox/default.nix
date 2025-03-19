@@ -14,12 +14,19 @@
     enable = true;
     #package = (pkgs.firefox.override { nativeMessagingHosts = [
     #    inputs.pipewire-screenaudio.packages.${pkgs.system}.default ]; });
+    #
+
+    # wrapperConfig.speechSynthesisSupport = false; # speechd might be causeing audio issues
+    package = (pkgs.firefox.override {
+      cfg = { speechSynthesisSupport = false; };
+    });
+
 
     #nativeMessagingHosts = [
     #  inputs.pipewire-screenaudio.packages.${pkgs.system}.default
     #];
 
-    wrapperConfig.speechSynthesisSupport = false; # speechd might be causeing audio issues
+
 
     arkenfox = {
       enable = true;
@@ -129,6 +136,7 @@
           "extensions.pocket.enabled" = false;
           "signon.rememberSignons" = false;
           #"toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+          "browser.sessionstore.restore_pinned_tabs_on_demand" = true; # prevent pinned tabs being restored on startup
         };
       };
     };
