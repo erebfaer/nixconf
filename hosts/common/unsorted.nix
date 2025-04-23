@@ -2,6 +2,7 @@
 {
   pkgs,
   inputs,
+  outputs,
   ...
 }: {
   environment.systemPackages = with pkgs; [
@@ -29,22 +30,20 @@
     standardnotes # broken
     unstable.obsidian # electron
     notesnook
+    onlyoffice-bin
 
     # libsForQt5.index # broken on gnome, and cant find qt6 version
 
     trackma-gtk # anime tracking
 
     p7zip
+    libarchive # use bsdtar
 
     zenity
 
     unstable.spacedrive
     fd
     syncthing
-    ueberzugpp
-    rio
-
-    ferium
 
     transgui
 
@@ -56,9 +55,12 @@
 
     ungoogled-chromium
 
-    onlyoffice-bin
+    oxce-brutal
 
-    unstable.gdlauncher-carbon # minecraft launcher
+    # minecraft
+    unstable.gdlauncher-carbon
+    unstable.packwiz
+    prismlauncher # form of multimc? so should work with packwiz
   ];
 
   programs = {

@@ -31,6 +31,7 @@
 
   nixpkgs = {
     overlays = [
+      outputs.overlays.additions
       outputs.overlays.unstable-packages
     ];
     config = {
@@ -100,10 +101,12 @@
     "/mnt/ayizan" = {
       device = "192.168.1.24:/Multimedia";
       fsType = "nfs";
+      options = [ "x-systemd.automount" "noauto" ]; # lazy mount
     };
     "/mnt/legba" = {
       device = "192.168.1.26:/home/erebfaer/Downloads";
       fsType = "nfs";
+      options = [ "x-systemd.automount" "noauto" ]; # lazy mount
     };
   };
 

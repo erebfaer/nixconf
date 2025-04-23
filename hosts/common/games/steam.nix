@@ -32,8 +32,13 @@
             libkrb5
             keyutils
             glib
-            SDL_gfx # added for OXCE
+
             xorg.libxkbfile # added for RimSort
+            # added for oxce
+            SDL
+            SDL_gfx
+            SDL_image
+            SDL_mixer
           ];
         extraPkgs = pkgs:
           with pkgs; [
