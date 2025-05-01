@@ -22,6 +22,7 @@
 
     ../common/games
     # ../common/games/awakened-poe.nix
+    ../common/games/openmw
 
     # breaks current dns
     # ../common/unbound.nix
