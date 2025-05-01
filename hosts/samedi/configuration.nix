@@ -4,6 +4,7 @@
   config,
   lib,
   pkgs,
+  openmw-nix,
   ...
 }: {
   imports = [
@@ -22,7 +23,7 @@
 
     ../common/games
     # ../common/games/awakened-poe.nix
-    ../common/games/openmw
+    ../common/games/openmw.nix
 
     # breaks current dns
     # ../common/unbound.nix
