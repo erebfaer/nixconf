@@ -36,12 +36,18 @@
 
     nix-alien.url = "github:thiagokokada/nix-alien";
     nix-colors.url = "github:misterio77/nix-colors";
+
+    openmw-nix = {
+      url = "git+https://codeberg.org/PopeRigby/openmw-nix.git";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    openmw-nix,
     ...
   } @ inputs: let
     inherit (self) outputs;

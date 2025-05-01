@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{pkgs,...}: {
+  imports = [
+    ./openmw
+  ];
+
   home.packages = with pkgs; [
     starsector
     fallout-ce
