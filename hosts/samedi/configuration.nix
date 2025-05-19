@@ -4,7 +4,6 @@
   config,
   lib,
   pkgs,
-  openmw-nix,
   ...
 }: {
   imports = [

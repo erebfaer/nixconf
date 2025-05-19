@@ -4,6 +4,7 @@
     delta-plugin
     openmw-dev
     openmw-validator
-    plox
+    #plox
+    umo
   ];
 }
