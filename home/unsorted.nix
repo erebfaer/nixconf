@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, lib, ...}: {
   home.packages = with pkgs; [
     bottles
     czkawka
@@ -8,7 +8,6 @@
     verco
     du-dust
     duf
-    nerdfonts
   ];
 
   programs = {
@@ -36,4 +35,6 @@
       package = pkgs.espanso-wayland;
     };
   };
+
+  fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 }
