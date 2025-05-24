@@ -1,4 +1,3 @@
-# for all hosts
 {
   pkgs,
   inputs,

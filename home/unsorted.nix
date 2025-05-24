@@ -26,6 +26,8 @@
     zathura.enable = true;
     zellij.enable = true;
     nnn.enable = true;
+
+    rio.enable = true;
   };
 
   services = {

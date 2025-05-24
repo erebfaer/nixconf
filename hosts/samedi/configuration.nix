@@ -21,8 +21,9 @@
     ../common/gui/gnome.nix
 
     ../common/games
+    ../common/games/sunshine.nix
     # ../common/games/awakened-poe.nix
-    ../common/games/openmw.nix
+    # TODO: things are broken ../common/games/openmw.nix
 
     # breaks current dns
     # ../common/unbound.nix
@@ -39,6 +40,13 @@
       allowUnfree = true;
     };
   };
+
+  # TODO remove and fix
+
+    nixpkgs.config.permittedInsecurePackages = [
+        "electron-33.4.11"
+    ];
+
 
   networking = {
     hostName = "samedi";
@@ -66,7 +74,7 @@
     # helix and nix lsp
     helix
 
-    sddm
+    kdePackages.sddm
     gtk3
     alacritty
 
