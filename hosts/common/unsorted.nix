@@ -3,6 +3,7 @@
   pkgs,
   inputs,
   outputs,
+  lib,
   ...
 }: {
   environment.systemPackages = with pkgs; [
@@ -88,6 +89,8 @@
   services.devmon.enable = true;
   services.gvfs.enable = true;
   services.udisks2.enable = true;
+
+  fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   # can't remember what wanted this...
   networking.firewall = {

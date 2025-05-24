@@ -1,4 +1,4 @@
-{pkgs, lib, ...}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     bottles
     czkawka
@@ -35,6 +35,4 @@
       package = pkgs.espanso-wayland;
     };
   };
-
-  fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 }
