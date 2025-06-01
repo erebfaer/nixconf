@@ -27,11 +27,17 @@
     nnn.enable = true;
 
     rio.enable = true;
+
+    carapace = {
+      enable = true;
+      enableFishIntegration = true;
+      enableNushellIntegration = true;
+    };
   };
 
   services = {
     espanso = {
-      enable = true;
+      enable = false; # TODO: not working atm?
       package = pkgs.espanso-wayland;
     };
   };

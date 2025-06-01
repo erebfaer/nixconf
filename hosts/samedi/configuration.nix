@@ -22,7 +22,6 @@
 
     ../common/games
     ../common/games/sunshine.nix
-    # ../common/games/awakened-poe.nix
     # TODO: things are broken ../common/games/openmw.nix
 
     # breaks current dns
@@ -59,7 +58,7 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     extraModulePackages = with config.boot.kernelPackages; [nct6687d]; # for CPU sensors
-    kernelModules = ["nct6687d"];
+    kernelModules = ["nct6687d" "v4l2loopback"];
     kernelParams = [ "preempt=full" ]; # preempt for realtime or bonus fps?
   };
 

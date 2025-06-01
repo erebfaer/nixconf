@@ -56,6 +56,7 @@
           # bypass-paywalls-clean
           reddit-enhancement-suite
           auto-tab-discard
+          raindropio
 
           # steam stuff
           augmented-steam

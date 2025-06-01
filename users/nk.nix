@@ -18,6 +18,8 @@
       "audio"
       "gamemode"
       "docker"
+      "qemu-libvirtd"
+      "libvirtd"
     ];
   };
 }

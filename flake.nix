@@ -22,8 +22,8 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # Nix User Repository
-    nur.url = "github:nix-community/NUR";
+
+    nur.url = "github:nix-community/NUR"; # Nix User Repository
 
     # Other flakes
     nix-index-database.url = "github:Mic92/nix-index-database";
@@ -37,6 +37,7 @@
     nix-alien.url = "github:thiagokokada/nix-alien";
     nix-colors.url = "github:misterio77/nix-colors";
 
+    # Game stuff
     openmw-nix = {
       url = "git+https://codeberg.org/PopeRigby/openmw-nix.git";
       inputs.nixpkgs.follows = "nixpkgs";

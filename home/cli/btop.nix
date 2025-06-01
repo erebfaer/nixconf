@@ -2,6 +2,7 @@
 
   programs.btop = {
     enable = true;
+    package = pkgs.btop-rocm; # for gpu support
     settings = {
       truecolor = true;
       graph_symbol = "brail";

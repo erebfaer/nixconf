@@ -82,7 +82,7 @@
     ydotool.enable = true;
   };
 
-  virtualisation.virtualbox.host.enable = true;
+  # virtualisation.virtualbox.host.enable = true; # broken?
   users.extraGroups.vboxusers.members = ["nk"];
 
   # usb devices
