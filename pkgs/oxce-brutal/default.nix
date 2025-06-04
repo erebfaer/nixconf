@@ -24,7 +24,7 @@ stdenv.mkDerivation {
     owner = "Xilmi";
     repo = "OpenXcom";
     rev = "2df0117ecd207b8213d8c4a8a9ca23e799f42959";
-    hash = "sha256-AOj+PD0MQZr1dAZYBdw3FQ0zSMOdvcYiTzrk6UEjJbE=";
+    hash = "sha256-u/nhD+fm5vUZ0IP3t8soVJ/B/ksMaEy341HmBwIw3Lg=";
   };
 
   nativeBuildInputs = [
