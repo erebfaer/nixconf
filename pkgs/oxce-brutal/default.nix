@@ -18,12 +18,12 @@
 
 stdenv.mkDerivation {
   pname = "oxce-brutal";
-  version = "9.2.7";
+  version = "2025-06-01";
 
   src = fetchFromGitHub {
     owner = "Xilmi";
     repo = "OpenXcom";
-    rev = "7643ad2a8072c2ddc8a050c35816b0ee3613ec43";
+    rev = "2df0117ecd207b8213d8c4a8a9ca23e799f42959";
     hash = "sha256-AOj+PD0MQZr1dAZYBdw3FQ0zSMOdvcYiTzrk6UEjJbE=";
   };
 
