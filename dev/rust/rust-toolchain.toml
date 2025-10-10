@@ -1,4 +1,4 @@
 [toolchain]
-channel = "1.85.1"  # update as necessary
+channel = "1.89.0"  # update as necessary
 profile = "default"  # see https://rust-lang.github.io/rustup/concepts/profiles.html
 components = ["rust-src"]  # see https://rust-lang.github.io/rustup/concepts/components.html

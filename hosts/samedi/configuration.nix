@@ -19,6 +19,7 @@
     ../common/dm/sddm.nix
     #../common/gui/plasma6.nix
     ../common/gui/gnome.nix
+    ../common/gui/cosmic.nix
 
     ../common/games
     ../common/games/sunshine.nix
@@ -28,6 +29,7 @@
     # ../common/unbound.nix
     ../common/containers
     # ../common/containers/pihole.nix
+    ../common/virtual-machines.nix
   ];
 
   nixpkgs = {
@@ -42,10 +44,9 @@
 
   # TODO remove and fix
 
-    nixpkgs.config.permittedInsecurePackages = [
-        "electron-33.4.11"
-    ];
-
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-33.4.11"
+  ];
 
   networking = {
     hostName = "samedi";
@@ -57,11 +58,11 @@
   # Kernel stuff
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
+    # kernelPackages = pkgs.linuxKernel.packages.linux_6_14; # previously kernel because 6.15.3 had problems
     extraModulePackages = with config.boot.kernelPackages; [nct6687d]; # for CPU sensors
     kernelModules = ["nct6687d" "v4l2loopback"];
-    kernelParams = [ "preempt=full" ]; # preempt for realtime or bonus fps?
+    kernelParams = ["preempt=full"]; # preempt for realtime or bonus fps?
   };
-
 
   environment.systemPackages = with pkgs; [
     # TODO: clean this out
@@ -82,6 +83,9 @@
     statix
 
     nfs-utils
+
+    brlaser # printer driver
+    ghostscript # required for above
   ];
 
   environment.variables.EDITOR = "hx";
@@ -109,12 +113,12 @@
     "/mnt/ayizan" = {
       device = "192.168.1.24:/Multimedia";
       fsType = "nfs";
-      options = [ "x-systemd.automount" "noauto" ]; # lazy mount
+      options = ["x-systemd.automount" "noauto"]; # lazy mount
     };
     "/mnt/legba" = {
       device = "192.168.1.26:/home/erebfaer/Downloads";
       fsType = "nfs";
-      options = [ "x-systemd.automount" "noauto" ]; # lazy mount
+      options = ["x-systemd.automount" "noauto"]; # lazy mount
     };
   };
 

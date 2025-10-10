@@ -1,15 +1,14 @@
-{pkgs,...}: {
-
+{pkgs, ...}: {
   home.packages = with pkgs; [
     starsector
-    fallout-ce
-    fallout2-ce
+    # fallout-ce
+    # fallout2-ce
     # openmw
-    forge-mtg
+    # forge-mtg
 
     # roguelikes
-    brogue-ce
+    # brogue-ce
     crawlTiles # DCSS
-    infra-arcana
+    # infra-arcana
   ];
 }

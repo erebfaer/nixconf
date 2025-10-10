@@ -24,6 +24,7 @@
     spotify-player
     vlc
     unstable.spotube
+    grayjay
 
     # documents
     kdePackages.okular
@@ -48,7 +49,6 @@
 
     transgui
 
-    lact
     httm
     unstable.xiu
 
@@ -62,6 +62,12 @@
     unstable.gdlauncher-carbon
     unstable.packwiz
     prismlauncher # form of multimc? so should work with packwiz
+
+    amf
+
+    qcad
+
+    distrobox
   ];
 
   programs = {
