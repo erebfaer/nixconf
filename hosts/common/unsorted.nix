@@ -16,7 +16,7 @@
     bandwhich
 
     # multimedia
-    jellyfin-media-player
+    # jellyfin-media-player # insecure qtwebengine
     jellyfin-mpv-shim
     # unstable.feishin # electron
     spotify
@@ -32,7 +32,7 @@
     standardnotes # broken
     unstable.obsidian # electron
     notesnook
-    onlyoffice-bin
+    onlyoffice-desktopeditors
 
     # libsForQt5.index # broken on gnome, and cant find qt6 version
 
@@ -87,7 +87,7 @@
 
     ydotool.enable = true;
   };
-  
+
   # virtualisation.virtualbox.host.enable = true; # broken?
   users.extraGroups.vboxusers.members = ["nk"];
 

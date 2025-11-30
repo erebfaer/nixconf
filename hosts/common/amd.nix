@@ -22,18 +22,13 @@
       enable32Bit = true;
     };
     amdgpu = {
-      amdvlk = {
-        enable = true;
-        support32Bit.enable = true;
-      };
-
       initrd.enable = true;
       opencl.enable = true;
     };
   };
 
   # Tools
-  environment.systemPackages = with pkgs; [ lact ];
-  systemd.packages = with pkgs; [ lact ];
+  environment.systemPackages = with pkgs; [lact];
+  systemd.packages = with pkgs; [lact];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
 }
