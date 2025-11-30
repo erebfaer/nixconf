@@ -42,6 +42,11 @@
       url = "git+https://codeberg.org/PopeRigby/openmw-nix.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    pob = {
+      url = "github:jaeensson/nixos-rusty-path-of-building";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -49,6 +54,7 @@
     nixpkgs,
     home-manager,
     openmw-nix,
+    pob,
     ...
   } @ inputs: let
     inherit (self) outputs;

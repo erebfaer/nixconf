@@ -17,16 +17,13 @@
     #
 
     # wrapperConfig.speechSynthesisSupport = false; # speechd might be causeing audio issues
-    package = (pkgs.firefox.override {
-      cfg = { speechSynthesisSupport = false; };
-    });
-
+    package = pkgs.firefox.override {
+      cfg = {speechSynthesisSupport = false;};
+    };
 
     #nativeMessagingHosts = [
     #  inputs.pipewire-screenaudio.packages.${pkgs.system}.default
     #];
-
-
 
     arkenfox = {
       enable = true;
@@ -66,6 +63,7 @@
           sponsorblock
           dearrow
           improved-tube
+          faststream
         ];
 
         arkenfox = {
