@@ -33,5 +33,12 @@
     };
 
     nix-index-database.comma.enable = true; # , to just run uninstalled packages
+
+    nh = {
+      enable = true;
+      clean.enable = true;
+      clean.extraArgs = "--keep-since 4d --keep 3";
+      flake = "/home/nk/nixconf";
+    };
   };
 }

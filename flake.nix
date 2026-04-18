@@ -34,6 +34,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    betterfox = {
+      url = "github:HeitorAugustoLN/betterfox-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-alien.url = "github:thiagokokada/nix-alien";
     nix-colors.url = "github:misterio77/nix-colors";
 
@@ -43,9 +48,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    pob = {
-      url = "github:jaeensson/nixos-rusty-path-of-building";
-      inputs.nixpkgs.follows = "nixpkgs";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        # IMPORTANT: To ensure compatibility with the latest Firefox version, use nixpkgs-unstable.
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
     };
   };
 
@@ -54,7 +63,6 @@
     nixpkgs,
     home-manager,
     openmw-nix,
-    pob,
     ...
   } @ inputs: let
     inherit (self) outputs;

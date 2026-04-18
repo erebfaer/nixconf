@@ -68,6 +68,9 @@
     qcad
 
     distrobox
+
+    unstable.rusty-path-of-building
+    logseq
   ];
 
   programs = {

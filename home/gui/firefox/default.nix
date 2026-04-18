@@ -7,31 +7,25 @@
   ...
 }: {
   imports = [
-    inputs.arkenfox.hmModules.arkenfox
+    inputs.betterfox.modules.homeManager.betterfox
   ];
 
   programs.firefox = {
     enable = true;
-    #package = (pkgs.firefox.override { nativeMessagingHosts = [
-    #    inputs.pipewire-screenaudio.packages.${pkgs.system}.default ]; });
-    #
 
     # wrapperConfig.speechSynthesisSupport = false; # speechd might be causeing audio issues
     package = pkgs.firefox.override {
-      cfg = {speechSynthesisSupport = false;};
+      cfg = {speechSynthe9sisSupport = false;};
     };
 
-    #nativeMessagingHosts = [
-    #  inputs.pipewire-screenaudio.packages.${pkgs.system}.default
-    #];
-
-    arkenfox = {
+    betterfox = {
       enable = true;
-      version = "122.0";
+      profiles.default = {
+        enableAllSections = true;
+      };
     };
 
     profiles = {
-      media = import ./media-profile.nix {inherit pkgs;} // {id = 1;};
       default = {
         isDefault = true;
 
@@ -63,72 +57,8 @@
           sponsorblock
           dearrow
           improved-tube
-          faststream
+          # faststream # apparently gone?
         ];
-
-        arkenfox = {
-          enable = true;
-
-          "0100".enable = true;
-          "0200".enable = true;
-          "0300".enable = true;
-          "0400".enable = true;
-
-          "0600".enable = true;
-          "0700".enable = true;
-          "0800".enable = true;
-          "0900".enable = true;
-          "1000".enable = true;
-
-          "1200".enable = true;
-
-          "1600".enable = true;
-          "1700".enable = true;
-
-          "2000".enable = true;
-
-          "2400".enable = true;
-
-          "2600".enable = true;
-          "2700".enable = true;
-          "2800" = {
-            enable = true;
-            # if i want to keep history on close
-            "2811" = {
-              "privacy.clearOnShutdown.history".value = false;
-            };
-          };
-
-          # resist fingerprinting block
-          "4500" = {
-            enable = true;
-            "4501"."privacy.resistFingerprinting".value = false;
-            "4504"."privacy.resistFingerprinting.letterboxing".value = false;
-            "4520"."webgl.disabled".value = false;
-          };
-
-          # optional hardening and opsec
-          # "5000".enable = true;
-          # "5500".enable = true;
-
-          "6000".enable = true;
-          "7000".enable = true;
-          "8000".enable = true;
-          "9000".enable = true;
-        };
-
-        # trying to fix min/max/close buttons not appearing
-        /*
-         userChrome =
-        ''
-          #toolbar-menubar {
-            display: none !important;
-          }
-          #toolbar-menubar[autohide="true"]:not([inactive]) + #TabsToolbar > .titlebar-buttonbox-container {
-            visibility: visible !important;
-          }
-        '';
-        */
 
         settings = {
           "general.autoScroll" = true;
@@ -136,6 +66,17 @@
           "signon.rememberSignons" = false;
           #"toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "browser.sessionstore.restore_pinned_tabs_on_demand" = true; # prevent pinned tabs being restored on startup
+          "extensions.formautofill.addresses.enabled" = false;
+          "extensions.formautofill.creditCards.enabled" = false;
+          "network.trr.uri" = "https://base.dns.mullvad.net/dns-query";
+
+          # clear on close
+          "privacy.sanitize.sanitizeOnShutdown" = true;
+          "privacy.clearOnShutdown_v2.cache" = true;
+          "privacy.clearOnShutdown_v2.cookiesAndStorage" = true; # ctrl-i permissions should still work
+          "privacy.clearOnShutdown_v2.browsingHistoryAndDownloads" = false; # want history
+          "privacy.clearOnShutdown_v2.formdata" = true;
+          "browser.sessionstore.privacy_level" = 2; # breaks session restore
         };
       };
     };

@@ -11,6 +11,7 @@
     ./games
     ./cli
 
+    ./easyeffects.nix
     ./unsorted.nix
   ];
 
@@ -25,8 +26,10 @@
 
   programs.git = {
     enable = true;
-    userName = "erebfaer";
-    userEmail = "erebfaer@hotmail.com";
+    settings.user = {
+      name = "erebfaer";
+      email = "erebfaer@hotmail.com";
+    };
     lfs.enable = true;
   };
 

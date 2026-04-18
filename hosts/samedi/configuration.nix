@@ -30,6 +30,8 @@
     ../common/containers
     # ../common/containers/pihole.nix
     ../common/virtual-machines.nix
+
+    ../common/broadcast-box.nix
   ];
 
   nixpkgs = {

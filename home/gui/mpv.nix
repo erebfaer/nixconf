@@ -83,11 +83,12 @@
       sigmoid-upscaling = "yes";
     };
 
-    scripts = [
-      pkgs.mpvScripts.mpv-playlistmanager
-      pkgs.mpvScripts.thumbfast
-      pkgs.mpvScripts.uosc
-      pkgs.mpvScripts.mpris
+    scripts = with pkgs; [
+      mpvScripts.mpv-playlistmanager
+      mpvScripts.thumbfast
+      mpvScripts.uosc
+      mpvScripts.mpris
+      unstable.mpvScripts.mpv-webm
     ];
 
     scriptOpts = {
@@ -130,6 +131,15 @@
         proximity_out = 80;
         destination_time = "total";
         autohide = "yes";
+      };
+
+      webm = {
+        output_directory = "~/Videos";
+        scale_height = 480;
+        output_format = "webp";
+        twopass = "no";
+        apply_current_filters = "no";
+        completion_command = ''run wl-copy -t text/uri-list "file:/%{output}"'';
       };
     };
   };

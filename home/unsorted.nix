@@ -6,7 +6,7 @@
     fd
     ripgrep-all
     verco
-    du-dust
+    dust
     duf
   ];
 
@@ -15,7 +15,7 @@
     bottom.enable = true;
     mcfly.enable = true;
     gitui.enable = true;
-    git.delta.enable = true;
+
     eza.enable = true;
     bat.enable = true;
     ripgrep.enable = true;
@@ -32,6 +32,11 @@
       enable = true;
       enableFishIntegration = true;
       enableNushellIntegration = true;
+    };
+
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
     };
   };
 

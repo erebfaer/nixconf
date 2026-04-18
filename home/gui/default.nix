@@ -9,6 +9,7 @@
     ./mpv.nix
     ./vscodium.nix
     ./zed.nix
+    ./zen.nix
   ];
 
   home = {
