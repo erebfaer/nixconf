@@ -11,13 +11,14 @@
     ./games
     ./cli
 
-    ./easyeffects.nix
+    # ./easyeffects.nix # auto applies incomplete filter chain breaking input, maybe later
     ./unsorted.nix
   ];
 
   nixpkgs = {
     overlays = [
       outputs.overlays.unstable-packages
+      inputs.nix-vscode-extensions.overlays.default
     ];
     config = {
       allowUnfree = true;

@@ -38,6 +38,9 @@
       enable = true;
       enableGitIntegration = true;
     };
+
+    ghostty.enable = true;
+    
   };
 
   services = {

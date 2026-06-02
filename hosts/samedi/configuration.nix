@@ -19,7 +19,7 @@
     ../common/dm/sddm.nix
     #../common/gui/plasma6.nix
     ../common/gui/gnome.nix
-    ../common/gui/cosmic.nix
+    # ../common/gui/cosmic.nix
 
     ../common/games
     ../common/games/sunshine.nix

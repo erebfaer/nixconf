@@ -71,6 +71,9 @@
 
     unstable.rusty-path-of-building
     logseq
+
+    rust-analyzer
+    unstable.devenv
   ];
 
   programs = {

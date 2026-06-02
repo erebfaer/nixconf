@@ -42,6 +42,11 @@
     nix-alien.url = "github:thiagokokada/nix-alien";
     nix-colors.url = "github:misterio77/nix-colors";
 
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Game stuff
     openmw-nix = {
       url = "git+https://codeberg.org/PopeRigby/openmw-nix.git";
@@ -63,6 +68,7 @@
     nixpkgs,
     home-manager,
     openmw-nix,
+    nix-vscode-extensions,
     ...
   } @ inputs: let
     inherit (self) outputs;

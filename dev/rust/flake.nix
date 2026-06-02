@@ -11,9 +11,9 @@
     rust-overlay,
   }:
     flake-utils.lib.eachDefaultSystem (
-      stdenv.hostPlatform.system: let
+      system: let
         pkgs = import nixpkgs {
-          inherit stdenv.hostPlatform.system;
+          inherit system;
 
           # Adding this overlay adds `pkgs.rust-bin` which is defined by rust-overlay
           overlays = [rust-overlay.overlays.default];
