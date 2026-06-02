@@ -25,6 +25,8 @@
     };
   };
 
+  xdg.enable = true;
+
   programs.git = {
     enable = true;
     settings.user = {

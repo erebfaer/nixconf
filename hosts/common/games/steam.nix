@@ -21,10 +21,10 @@
         extraEnv = {};
         extraLibraries = pkgs:
           with pkgs; [
-            xorg.libXcursor
-            xorg.libXi
-            xorg.libXinerama
-            xorg.libXScrnSaver
+            libXcursor
+            libXi
+            libXinerama
+            libXScrnSaver
             libpng
             libpulseaudio
             libvorbis
@@ -33,7 +33,7 @@
             keyutils
             glib
 
-            xorg.libxkbfile # added for RimSort
+            libxkbfile # added for RimSort
             # added for oxce
             SDL
             SDL_gfx

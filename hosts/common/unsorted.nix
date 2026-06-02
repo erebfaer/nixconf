@@ -70,7 +70,7 @@
     distrobox
 
     unstable.rusty-path-of-building
-    logseq
+    # logseq  # EOL electron
 
     rust-analyzer
     unstable.devenv

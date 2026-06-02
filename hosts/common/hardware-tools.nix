@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     lm_sensors
-    neofetch
+    fastfetch
   ];
 }

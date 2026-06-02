@@ -5,7 +5,7 @@
     gping
     fd
     ripgrep-all
-    verco
+
     dust
     duf
   ];
@@ -40,7 +40,6 @@
     };
 
     ghostty.enable = true;
-    
   };
 
   services = {

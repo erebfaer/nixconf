@@ -45,6 +45,7 @@
       enable = true;
       enableFishIntegration = true;
       enableNushellIntegration = true;
+      shellWrapperName = "y"; # change of default from 26.05
     };
     obs-studio = {
       enable = true;

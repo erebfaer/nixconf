@@ -12,6 +12,7 @@
 
   programs.firefox = {
     enable = true;
+    configPath = ".mozilla/firefox"; # changed from 26.05, keep it the same for now
 
     # wrapperConfig.speechSynthesisSupport = false; # speechd might be causeing audio issues
     package = pkgs.firefox.override {
