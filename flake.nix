@@ -29,10 +29,10 @@
     nix-index-database.url = "github:Mic92/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
-    arkenfox = {
-      url = "github:dwarfmaster/arkenfox-nixos";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #arkenfox = {
+    #  url = "github:dwarfmaster/arkenfox-nixos";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     betterfox = {
       url = "github:HeitorAugustoLN/betterfox-nix";

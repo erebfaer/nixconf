@@ -43,7 +43,7 @@
 
     zenity
 
-    unstable.spacedrive
+    #  unstable.spacedrive
     fd
     syncthing
 
@@ -56,7 +56,8 @@
 
     ungoogled-chromium
 
-    oxce-brutal
+    openxcom-extended
+    # oxce-brutal
 
     # minecraft
     unstable.gdlauncher-carbon

@@ -139,7 +139,8 @@
         output_format = "webp";
         twopass = "no";
         apply_current_filters = "no";
-        completion_command = ''run wl-copy -t text/uri-list "file:/%{output}"'';
+        # completion_command = ''run wl-copy -t text/uri-list "file:/%{output}"'';
+        display_progress = "no";
       };
     };
   };
