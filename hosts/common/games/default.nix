@@ -9,13 +9,14 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    protonup-qt
-    protonplus #replace above
+    unstable.protonplus
     unstable.protontricks
 
     heroic
     lutris
 
     unstable.ludusavi
+
+    # unstable.rimsort # broken?
   ];
 }

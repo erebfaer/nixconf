@@ -61,8 +61,8 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     # kernelPackages = pkgs.linuxKernel.packages.linux_6_14; # previously kernel because 6.15.3 had problems
-    extraModulePackages = with config.boot.kernelPackages; [nct6687d]; # for CPU sensors
-    kernelModules = ["nct6687d" "v4l2loopback"];
+    #extraModulePackages = with config.boot.kernelPackages; [nct6687d]; # for CPU sensors
+    kernelModules = ["v4l2loopback"]; # removed "nct6687d"
     kernelParams = ["preempt=full"]; # preempt for realtime or bonus fps?
   };
 
@@ -112,6 +112,8 @@
     "/home".options = ["compress=zstd" "noatime"];
     "/nix".options = ["compress=zstd" "noatime"];
     "/swap".options = ["noatime"];
+    "/mnt/steam".options = ["compress=zstd" "noatime"];
+    "/mnt/data".options = ["defaults" "noatime"];
     "/mnt/ayizan" = {
       device = "192.168.1.24:/Multimedia";
       fsType = "nfs";

@@ -75,6 +75,22 @@
 
     rust-analyzer
     unstable.devenv
+
+    telegram-desktop
+
+    mslicer
+    blender
+    unstable.orca-slicer
+    unstable.prusa-slicer
+
+    unstable.mojo-bin
+    pixi
+
+    syncplay
+
+    pinta
+
+    #rust-analyzer-nightly
   ];
 
   programs = {
@@ -93,6 +109,7 @@
     appimage.binfmt = true; # run appimages seamlessly
 
     ydotool.enable = true;
+    kdeconnect.enable = true;
   };
 
   # virtualisation.virtualbox.host.enable = true; # broken?
@@ -102,6 +119,11 @@
   services.devmon.enable = true;
   services.gvfs.enable = true;
   services.udisks2.enable = true;
+
+  services.mullvad-vpn = {
+    enable = false;
+    package = pkgs.mullvad-vpn;
+  };
 
   fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 

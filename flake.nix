@@ -47,6 +47,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Game stuff
     openmw-nix = {
       url = "git+https://codeberg.org/PopeRigby/openmw-nix.git";
@@ -69,6 +74,7 @@
     home-manager,
     openmw-nix,
     nix-vscode-extensions,
+    fenix,
     ...
   } @ inputs: let
     inherit (self) outputs;

@@ -29,6 +29,6 @@
 
   users.users.myuser = {
     isNormalUser = true;
-    extraGroups = [ "podman" ];
+    extraGroups = ["podman"];
   };
 }

@@ -21,12 +21,12 @@
     ripgrep.enable = true;
     # beets.enable = true; # seems to be causing issues # TODO: should be fixed as of 16/03 but still passing
     fzf.enable = true;
-    wofi.enable = true;
     zathura.enable = true;
-    zellij.enable = true;
-    nnn.enable = true;
 
-    rio.enable = true;
+    zellij.enable = true;
+    zellij.package = pkgs.unstable.zellij;
+
+    nnn.enable = true;
 
     carapace = {
       enable = true;
